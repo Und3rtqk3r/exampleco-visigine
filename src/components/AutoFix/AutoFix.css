@@ -1,0 +1,123 @@
+.autofix {
+  padding: 2rem 2.5rem 2.25rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg2);
+}
+
+.autofix__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.autofix__title {
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-bright);
+}
+
+.autofix__sub {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  line-height: 1.55;
+  max-width: 640px;
+}
+
+/* File rows */
+.autofix__files {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.autofix__file {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: var(--r-md);
+  padding: 0.95rem 1.1rem;
+}
+
+.autofix__file-icon {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--amber);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(245,124,0,0.1);
+  border-radius: var(--r-sm);
+  flex-shrink: 0;
+}
+
+.autofix__file-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.autofix__file-name {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  letter-spacing: 0.02em;
+}
+
+.autofix__file-meta {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+.autofix__lock {
+  color: var(--text-dim);
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* Unlock CTA */
+.autofix__unlock-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--amber);
+  color: var(--amber);
+  border-radius: var(--r-sm);
+  padding: 0.85rem 1.6rem;
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.autofix__unlock-btn:hover {
+  background: var(--amber);
+  color: #0a0a0a;
+}
+
+@media (max-width: 640px) {
+  .autofix {
+    padding: 1.5rem 1.25rem 1.75rem;
+  }
+  .autofix__unlock-btn {
+    width: 100%;
+  }
+}

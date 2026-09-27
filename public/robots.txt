@@ -1,0 +1,80 @@
+Sitemap: https://www.examplevisi.example/sitemap.xml
+
+User-agent: *
+Allow: /
+Disallow: /impressum
+Disallow: /datenschutz
+
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Disallow: /impressum
+Disallow: /datenschutz
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+Disallow: /impressum
+Disallow: /datenschutz
+
+User-agent: OAI-SearchBot
+Allow: /
+Allow: /llms.txt
+Disallow: /impressum
+Disallow: /datenschutz
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Disallow: /impressum
+Disallow: /datenschutz
+
+User-agent: Bingbot
+Allow: /
+Allow: /llms.txt
+Disallow: /impressum
+Disallow: /datenschutz
+
+User-agent: GoogleOther
+Allow: /
+Allow: /llms.txt
+Disallow: /impressum
+Disallow: /datenschutz
+
+User-agent: anthropic-ai
+Allow: /
+Allow: /llms.txt
+Disallow: /impressum
+Disallow: /datenschutz
+
+User-agent: Applebot
+Allow: /
+Allow: /llms.txt
+Disallow: /impressum
+Disallow: /datenschutz
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Allow: /llms.txt
+Disallow: /impressum
+Disallow: /datenschutz
+
+User-agent: Bytespider
+Allow: /
+Allow: /llms.txt
+Disallow: /impressum
+Disallow: /datenschutz
+
+User-agent: DuckAssistBot
+Allow: /
+Allow: /llms.txt
+Disallow: /impressum
+Disallow: /datenschutz
+
+User-agent: YouBot
+Allow: /
+Allow: /llms.txt
+Disallow: /impressum
+Disallow: /datenschutz
+
+Sitemap: https://www.examplevisi.example/sitemap.xml

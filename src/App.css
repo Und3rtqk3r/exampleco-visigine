@@ -1,0 +1,6 @@
+/* App-level layout reset — all styles live in component CSS files */
+#root {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}

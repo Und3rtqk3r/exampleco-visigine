@@ -1,0 +1,124 @@
+.features {
+  padding: 6rem 0;
+  background: var(--bg2);
+  position: relative;
+}
+
+.section-header {
+  max-width: 620px;
+  margin-bottom: 4rem;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 1.2rem;
+}
+
+.section-label .label-bar {
+  display: inline-block;
+  width: 20px;
+  height: 3px;
+  background: var(--amber);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-family: var(--font-head);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: var(--text-bright);
+  margin-bottom: 1rem;
+}
+
+.section-sub {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-dim);
+  line-height: 1.75;
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+
+.feature-card {
+  position: relative;
+  background: var(--bg2);
+  border-top: 3px solid transparent;
+  padding: 2.5rem 2rem;
+  overflow: hidden;
+  transition: background 0.2s;
+}
+
+.feature-card--amber { border-top-color: var(--amber); }
+.feature-card--teal  { border-top-color: #26A69A; }
+
+.feature-card:hover { background: var(--bg3); }
+
+.feature-card__icon {
+  font-size: 1.4rem;
+  color: var(--amber);
+  margin-bottom: 1.2rem;
+  line-height: 1;
+}
+
+.feature-card--teal .feature-card__icon { color: #26A69A; }
+
+.feature-card__title {
+  font-family: var(--font-head);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 0.7rem;
+}
+
+.feature-card__text {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+
+/* Shimmer */
+.feature-card__shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(245,124,0,0.04) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg) translateX(-200%);
+  pointer-events: none;
+}
+
+.feature-card:hover .feature-card__shimmer {
+  transform: skewX(-20deg) translateX(200%);
+  transition: transform 0.6s ease;
+}
+
+@media (max-width: 1024px) {
+  .features__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .features__grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,51 @@
+# ExampleVisi — single-stack compose. Frontend (nginx) is the only ingress;
+# the backend container is reachable only over the internal docker network.
+#
+# Secrets (MISTRAL_KEY, ADMIN_TOKEN) are read from ../server/.env.
+# Deployment vars (NODE_ENV, ALLOWED_ORIGINS, …) are overridden here.
+
+name: examplevisi
+
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: docker/backend.Dockerfile
+    container_name: examplevisi-backend
+    env_file:
+      - ../server/.env
+    environment:
+      NODE_ENV: production
+      PORT: "3001"
+      ALLOWED_ORIGINS: "http://localhost:8080"
+      ALLOW_PRIVATE_HOSTS: "0"
+      DB_PATH: "/data/examplevisi.db"
+    expose:
+      - "3001"
+    volumes:
+      # Persist the SQLite file across container rebuilds.
+      - examplevisi_data:/data
+    restart: unless-stopped
+    networks:
+      - examplevisi
+
+  frontend:
+    build:
+      context: ..
+      dockerfile: docker/frontend.Dockerfile
+    container_name: examplevisi-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - examplevisi
+
+networks:
+  examplevisi:
+    driver: bridge
+
+volumes:
+  examplevisi_data:

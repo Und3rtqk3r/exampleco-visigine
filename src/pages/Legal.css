@@ -1,0 +1,52 @@
+.legal {
+  min-height: 100vh;
+  padding: 8rem 0 6rem;
+}
+
+.legal__back {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 3rem;
+  transition: opacity 0.2s;
+}
+
+.legal__back:hover { opacity: 0.7; }
+
+.legal h1 {
+  font-family: var(--font-head);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--text-bright);
+  letter-spacing: -0.025em;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2rem;
+}
+
+.legal h2 {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin: 2.5rem 0 0.75rem;
+}
+
+.legal h3 {
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--amber);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.legal p {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  line-height: 1.8;
+  max-width: 720px;
+}

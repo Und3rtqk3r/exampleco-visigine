@@ -1,0 +1,65 @@
+.how {
+  padding: 6rem 0;
+  background: var(--bg);
+}
+
+.how__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.how__steps {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.5rem;
+}
+
+.how-step {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  border-left: 2px solid transparent;
+  transition: background 0.2s, border-left-color 0.2s;
+}
+
+.how-step:first-child { border-top: 1px solid var(--border); }
+
+.how-step:hover {
+  background: rgba(245,124,0,0.03);
+  border-left-color: var(--amber);
+}
+
+.how-step__num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--amber);
+  min-width: 36px;
+  padding-top: 0.2rem;
+}
+
+.how-step__title {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 0.45rem;
+}
+
+.how-step__text {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+.how__cta { display: flex; }
+
+@media (max-width: 640px) {
+  .how-step { gap: 1rem; }
+}

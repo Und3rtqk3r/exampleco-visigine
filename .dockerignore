@@ -1,0 +1,26 @@
+# Source artifacts that should NOT enter the build context.
+node_modules
+server/node_modules
+
+# Build outputs
+dist
+dist-ssr
+
+# Local env / secrets
+.env
+.env.local
+server/.env
+server/.env.local
+
+# Tooling caches
+.git
+.vite
+.cache
+.parcel-cache
+.idea
+.vscode
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
